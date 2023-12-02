@@ -22,7 +22,4 @@ jobs:
         docker build . --file Dockerfile --tag vr1090/simple_fetch:$TAG
         docker images
         echo " dalem build $TAG"
-    - name: push
-      run: |
-        echo "different step .. $TAG"
-        docker push vr1090/simple_fetch:$(date +%s)
+        docker push vr1090/simple_fetch:$TAG
