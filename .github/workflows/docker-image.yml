@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: test env
-      run: ls -al && echo $HELLO
+      run: ls -al && echo "value dari $HELLO atau $hello" && env
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
       with:
