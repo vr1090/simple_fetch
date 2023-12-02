@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      kutu: "setan"
+      gila: ${{ env.HELLO }}
     steps:
     - name: test env
-      run: echo "hello world $koplak ${{ env.hello }} atau ${{env.HELLO}} emang ada?"
+      run: echo "hello world $koplak ${{ env.hello }} atau ${{env.HELLO}} $kutu gila value $gila emang ada?"
