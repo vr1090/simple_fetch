@@ -17,6 +17,12 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vr1090/simple_fetch:$(date +%s)
+      run: |
+        TAG=$(date +%s)
+        docker build . --file Dockerfile --tag vr1090/simple_fetch:$TAG
+        docker images
+        echo " dalem build $TAG"
     - name: push
-      run: docker push vr1090/simple_fetch:$(date +%s)
+      run: |
+        echo "different step .. $TAG"
+        docker push vr1090/simple_fetch:$(date +%s)
