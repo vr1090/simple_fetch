@@ -17,3 +17,6 @@ build: clean
 	pip install -r requirements.txt
 	pytest --rootdir=src
 	pyinstaller main.spec
+
+docker: clean
+	docker build -t simple_fetch:latest
