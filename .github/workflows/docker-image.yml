@@ -1,17 +1,12 @@
 name: Docker Image CI
-
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: test env
       run: echo "hello world $koplak ${{ env.hello }} emang ada?"
