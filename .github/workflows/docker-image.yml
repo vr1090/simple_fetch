@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: test env
-      run: echo "hello world $koplak ${{ env.hello }} atau ${{env.HELLO}} $kutu gila value $gila ${{ vars.HI}} emang ada?"
+      run: echo "hello world $koplak ${{ env.hello }} atau ${{env.HELLO}} $kutu gila value $gila ${{ vars.HI}} atau kecil ${{ vars.hi}} emang ada?"
