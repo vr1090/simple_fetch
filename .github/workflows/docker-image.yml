@@ -16,4 +16,4 @@ jobs:
     - name: test env
       env:
         koplak: ${{ secrets }}
-      run: echo "hello world"
+      run: echo "hello world ${{ secrets}} emang ada?"
