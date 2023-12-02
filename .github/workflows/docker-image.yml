@@ -18,7 +18,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
       run: |
-        TAG=$(date +date "+%Y%m%d")
+        TAG=$(date "+%Y%m%d")
         docker build . --file Dockerfile --tag vr1090/simple_fetch:$TAG
         docker images
         echo " dalem build $TAG"
